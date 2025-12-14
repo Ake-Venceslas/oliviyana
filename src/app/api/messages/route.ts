@@ -56,7 +56,7 @@ export async function POST(request: Request) {
       sender: senderName,
       senderType: messageType === "appointment_request" ? "patient" : (messageType === "prescription" ? "doctor" : "system") as "doctor" | "patient" | "system",
       senderEmail: userId ? (await client.users.getUser(userId)).emailAddresses[0]?.emailAddress : undefined,
-      senderId: userId,
+      senderId: userId || undefined,
       subject,
       content,
       timestamp: new Date().toISOString(),
