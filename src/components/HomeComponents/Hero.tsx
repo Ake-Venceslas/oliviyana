@@ -22,30 +22,30 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="hidden h-[40rem] lg:grid grid-cols-2 items-center">
-        <div className="grid gap-y-5">
-          <h2 className="text-[3rem] font-bold w-[33rem] leading-[3.5rem]">
+      <div className="hidden lg:grid grid-cols-2 gap-8 lg:gap-12 items-center px-6 lg:px-12 py-12 lg:py-20">
+        <div className="grid gap-y-5 max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
             Connecter <span className="text-[#2E7D32]">les Patients</span> et{" "}
             <span className="text-[#2E7D32]">les Médecins</span>, N'importe Quand, N'importe Où
           </h2>
-          <p className="w-[25rem]">
+          <p className="text-base sm:text-lg text-gray-700">
             Réservez facilement des rendez-vous, accédez à vos dossiers et connectez-vous avec des médecins de confiance, tout en un seul endroit sécurisé.
           </p>
-          <div className="flex gap-5">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 pt-4">
             <Link
               href={"#"}
-              className="border-none bg-default text-white px-5 py-2 rounded-full"
+              className="border-none bg-default text-white px-6 py-3 rounded-full text-center font-medium text-sm sm:text-base hover:bg-[#1B5E20] transition"
             >
               Je suis un Patient
             </Link>
-            <Link href={"#"} className="border-2 px-3 py-2 rounded-lg">
+            <Link href={"#"} className="border-2 border-gray-300 px-6 py-3 rounded-lg text-center font-medium text-sm sm:text-base hover:border-[#2E7D32] hover:text-[#2E7D32] transition">
               Je suis un Médecin
             </Link>
           </div>
         </div>
 
         <div className="">
-          <div className="mask-alpha mask-x-from-black mask-x-from-70% mask-l-to-transparent mask-y-from-90% mask-y-to-transparent  bg-[url('/images/hero-3.jpg')] bg-cover bg-center w-auto h-[30rem]"></div>
+          <div className="mask-alpha mask-x-from-black mask-x-from-70% mask-l-to-transparent mask-y-from-90% mask-y-to-transparent bg-[url('/images/hero-3.jpg')] bg-cover bg-center w-full h-64 sm:h-80 lg:h-96 rounded-lg"></div>
         </div>
       </div>
 
