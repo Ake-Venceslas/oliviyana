@@ -15,7 +15,7 @@ export default clerkMiddleware(async (auth, req: NextRequest) => {
       return NextResponse.redirect(new URL('/login', req.url));
     }
     // Vérifier que l'utilisateur a le rôle "doctor"
-    const userRole = sessionClaims?.metadata?.role as string;
+    const userRole = (sessionClaims as any)?.metadata?.role as string | undefined;
     if (userRole && userRole !== 'doctor') {
       // Rôle incorrect, rediriger vers accès refusé
       return NextResponse.redirect(new URL('/access-denied', req.url));
@@ -28,7 +28,7 @@ export default clerkMiddleware(async (auth, req: NextRequest) => {
       return NextResponse.redirect(new URL('/login', req.url));
     }
     // Vérifier que l'utilisateur a le rôle "patient"
-    const userRole = sessionClaims?.metadata?.role as string;
+    const userRole = (sessionClaims as any)?.metadata?.role as string | undefined;
     if (userRole && userRole !== 'patient') {
       // Rôle incorrect, rediriger vers accès refusé
       return NextResponse.redirect(new URL('/access-denied', req.url));
