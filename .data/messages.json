@@ -1,0 +1,42 @@
+[
+  {
+    "id": "MSG_1765472585173_kdzgmr3fv",
+    "sender": "Système",
+    "senderType": "patient",
+    "senderId": null,
+    "subject": "Demande de rendez-vous - Ake Venceslas",
+    "content": "Le patient Ake Venceslas a demandé un rendez-vous.\n\nDate: 2025-12-26\nHeure: 17:00\nRaison: Palus\n\nContact: akevenceslas850@gmail.com",
+    "timestamp": "2025-12-11T17:03:05.173Z",
+    "isRead": false,
+    "isStarred": false,
+    "messageType": "appointment_request",
+    "recipientId": "user_36hxGeIGeSDwuqFX43JeVSwMkmM"
+  },
+  {
+    "id": "MSG_1765472611075_6jpjdb8sa",
+    "sender": "Anna Eyong",
+    "senderType": "doctor",
+    "senderEmail": "r26312142@gmail.com",
+    "senderId": "user_36hxGeIGeSDwuqFX43JeVSwMkmM",
+    "subject": "Rendez-vous confirmé ✓",
+    "content": "Votre rendez-vous du 2025-12-26 à 17:00 avec le Dr. Anna Eyong a été confirmé. Vous recevrez bientôt plus de détails sur le lieu et les modalités.",
+    "timestamp": "2025-12-11T17:03:31.075Z",
+    "isRead": false,
+    "isStarred": false,
+    "messageType": "appointment_confirmation",
+    "recipientId": "user_36hGYvHpVcj5YXEEH4fRVlX3zQa"
+  },
+  {
+    "id": "MSG_1765472763030_g90dl2ier",
+    "sender": "Système",
+    "senderType": "patient",
+    "senderId": null,
+    "subject": "Demande de rendez-vous - Ake Venceslas",
+    "content": "Le patient Ake Venceslas a demandé un rendez-vous.\n\nDate: 2025-12-26\nHeure: 17:01\nRaison: sida\n\nContact: akevenceslas850@gmail.com",
+    "timestamp": "2025-12-11T17:06:03.030Z",
+    "isRead": false,
+    "isStarred": false,
+    "messageType": "appointment_request",
+    "recipientId": "user_36hxGeIGeSDwuqFX43JeVSwMkmM"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "patientId": "user_36hGYvHpVcj5YXEEH4fRVlX3zQa",
+    "bio": "je suis un mec",
+    "sex": "Male",
+    "birthdate": "2006-03-07",
+    "address": "Nyalla Kambo",
+    "notes": "Rien de plus",
+    "barcode": "#MJ1LOC2W62MNS1QSQC",
+    "nationality": "Camerounais",
+    "profileImage": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18zNjRQNGFndjN1S3Q4MDhKSk9TMkFKNTdWNUgiLCJyaWQiOiJ1c2VyXzM2aEdZdkhwVmNqNVlYRUVINGZSVmxYM3pRYSIsImluaXRpYWxzIjoiQVYifQ",
+    "createdAt": "2025-12-11T15:35:48.008Z",
+    "updatedAt": "2025-12-11T15:41:33.111Z"
+  }
+]
