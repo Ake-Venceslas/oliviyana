@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
+import { toast } from 'sonner';
 import { Calendar, Clock, User, CheckCircle, XCircle, AlertCircle, Mail } from 'lucide-react';
 
 interface Appointment {
@@ -94,13 +95,13 @@ export default function AppointmentsPage() {
 
       setShowModal(false);
       setSelectedAppointment(null);
-      alert(
+      toast.success(
         newStatus === 'confirmed'
           ? 'Rendez-vous confirmé! Un message a été envoyé au patient.'
           : 'Rendez-vous refusé. Un message a été envoyé au patient.'
       );
     } catch (err) {
-      alert(`Erreur: ${err instanceof Error ? err.message : 'Erreur inconnue'}`);
+      toast.error(`Erreur: ${err instanceof Error ? err.message : 'Erreur inconnue'}`);
       console.error(err);
     } finally {
       setSubmitting(false);

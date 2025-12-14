@@ -1,5 +1,8 @@
+"use client";
+
 import { Mail, MapPin, Phone } from "lucide-react";
 import React, { useState } from "react";
+import { toast } from 'sonner';
 
 const ContactUs = () => {
   const [form, setForm] = useState({
@@ -16,7 +19,7 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: handle form submission (API, email, etc)
-    alert("Merci de nous avoir contactés!");
+    toast.success("Merci de nous avoir contactés!");
   };
   return (
     <div>

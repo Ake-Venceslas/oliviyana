@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import {
   ClerkProvider,
-  SignedIn,
-  UserButton,
 } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ToastProvider } from "@/components/ToastProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +32,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100`}
         >
-          <SignedIn>
-            <div className="fixed top-4 right-4 z-50">
-              <UserButton />
-            </div>
-          </SignedIn>
+          <ToastProvider />
           {children}
         </body>
       </html>

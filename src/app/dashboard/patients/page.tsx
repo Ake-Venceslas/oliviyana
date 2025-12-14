@@ -2,6 +2,7 @@
 
 import VitalsCards from "@/components/Dashboard/VitalsCard";
 import PatientProfileModal, { PatientProfileData } from "@/components/PatientProfileModal";
+import { toast } from 'sonner';
 import {
   CalendarDays,
   ChevronRight,
@@ -176,9 +177,9 @@ const PatientDashboard = () => {
 
       setProfileCompleted(true);
       setShowProfileModal(false);
-      alert('Profil mis à jour avec succès!');
+      toast.success('Profil mis à jour avec succès!');
     } catch (error) {
-      alert(`Erreur: ${error instanceof Error ? error.message : 'Erreur inconnue'}`);
+      toast.error(`Erreur: ${error instanceof Error ? error.message : 'Erreur inconnue'}`);
     } finally {
       setProfileLoading(false);
     }

@@ -16,14 +16,6 @@ interface DoctorData {
 
 export async function GET() {
   try {
-    const { userId } = await auth();
-    if (!userId) {
-      return NextResponse.json(
-        { error: "Non authentifié" },
-        { status: 401 }
-      );
-    }
-
     const client = await clerkClient();
     const users = await client.users.getUserList();
 
@@ -34,17 +26,6 @@ export async function GET() {
         return role === "doctor";
       })
       .map((user) => {
-        // Spécialités médicales
-        const specialties = [
-          "Cardiologie",
-          "Médecine Générale",
-          "Gynécologie",
-          "Pédiatrie",
-          "Dermatologie",
-          "Neurologie",
-          "Orthopédie",
-          "Ophtalmologie",
-        ];
         const bios = [
           "Médecin expérimenté avec plus de 10 ans de pratique",
           "Spécialiste réputé dans le domaine de la santé",
@@ -52,7 +33,13 @@ export async function GET() {
           "Praticien qualifié avec un suivi personnalisé",
         ];
 
-        const userIndex = (user.id.charCodeAt(0) + user.id.charCodeAt(1)) % 6;
+        const userIndex = (user.id.charCodeAt(0) + user.id.charCodeAt(1)) % 4;
+        
+        // Récupérer la première spécialité choisie lors de l'inscription
+        const specialties = user.unsafeMetadata?.specialties || [];
+        const specialty = Array.isArray(specialties) && specialties.length > 0 
+          ? specialties[0] 
+          : "Médecine Générale";
 
         return {
           id: user.id,
@@ -60,8 +47,8 @@ export async function GET() {
           lastName: user.lastName || "Médecin",
           email: user.emailAddresses[0]?.emailAddress || "",
           phone: user.phoneNumbers[0]?.phoneNumber || "+237 6 99 88 77 66",
-          specialty: specialties[userIndex % specialties.length],
-          bio: bios[userIndex % bios.length],
+          specialty: specialty,
+          bio: bios[userIndex],
           profileImage: user.imageUrl,
           experience: Math.floor(Math.random() * 20) + 5,
         };

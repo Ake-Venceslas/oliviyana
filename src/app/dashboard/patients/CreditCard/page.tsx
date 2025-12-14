@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { toast } from 'sonner';
 import { CreditCard, Plus, Trash2, Lock, Eye, EyeOff, Wallet, DollarSign, CheckCircle } from "lucide-react";
 import Image from "next/image";
 
@@ -151,7 +152,7 @@ const PaymentPage = () => {
   const handleAddPayment = (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.cardNumber && formData.cardHolder && formData.expiryDate && formData.cvv) {
-      alert("Fonctionnalité de paiement non disponible pour le moment.");
+      toast.info("Fonctionnalité de paiement non disponible pour le moment.");
       setFormData({ cardNumber: "", cardHolder: "", expiryDate: "", cvv: "" });
       setShowAddPayment(false);
     }

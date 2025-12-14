@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '@clerk/nextjs';
+import { toast } from 'sonner';
 import { MessageCircle, FileText, Search } from 'lucide-react';
 
 interface Patient {
@@ -76,7 +77,7 @@ export default function PrescriptionsPage() {
     e.preventDefault();
     
     if (!selectedPatient || !prescriptionText.trim()) {
-      alert('Veuillez sélectionner un patient et entrer une ordonnance');
+      toast.error('Veuillez sélectionner un patient et entrer une ordonnance');
       return;
     }
 
@@ -101,12 +102,12 @@ export default function PrescriptionsPage() {
       }
 
       await response.json();
-      alert(`Ordonnance envoyée à ${selectedPatient.firstName} ${selectedPatient.lastName}. Le patient la recevra dans ses messages.`);
+      toast.success(`Ordonnance envoyée à ${selectedPatient.firstName} ${selectedPatient.lastName}. Le patient la recevra dans ses messages.`);
       setPrescriptionText('');
       setShowPrescriptionModal(false);
       setSelectedPatient(null);
     } catch (err) {
-      alert(`Erreur lors de l'envoi de l'ordonnance: ${err instanceof Error ? err.message : 'Erreur inconnue'}`);
+      toast.error(`Erreur lors de l'envoi de l'ordonnance: ${err instanceof Error ? err.message : 'Erreur inconnue'}`);
       console.error(err);
     } finally {
       setSubmitting(false);
