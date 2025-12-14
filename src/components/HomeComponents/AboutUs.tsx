@@ -32,13 +32,13 @@ const AboutUs = () => {
               <div className="place-self-start pt-1.5">
                 <CircleCheckBig color="#2E7D32" size={15} />
               </div>
-              <p>Améliorer l'engagement des patients</p>
+              <p>Améliorer l&apos;engagement des patients</p>
             </div>
             <div className="flex items-center gap-x-[1rem]">
               <div className="place-self-start pt-1.5">
                 <CircleCheckBig color="#2E7D32" size={15} />
               </div>
-              <p>Promouvoir l'éducation sanitaire</p>
+              <p>Promouvoir l&apos;éducation sanitaire</p>
             </div>
             <div className="flex items-center gap-x-[1rem]">
               <div className="place-self-start pt-1.5">
@@ -102,7 +102,7 @@ const AboutUs = () => {
                     <div className="place-self-start pt-1.5">
                       <CircleCheckBig color="#2E7D32" size={15} />
                     </div>
-                    <p>Promouvoir l'éducation sanitaire</p>
+                    <p>Promouvoir l&apos;éducation sanitaire</p>
                   </div>
                   <div className="flex items-center gap-x-[1rem]">
                     <div className="place-self-start pt-1.5">

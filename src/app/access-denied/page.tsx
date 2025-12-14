@@ -21,7 +21,7 @@ export default function AccessDenied() {
             href="/"
             className="block bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 font-semibold"
           >
-            Retour à l'accueil
+            Retour à l&apos;accueil
           </Link>
         </div>
       </div>

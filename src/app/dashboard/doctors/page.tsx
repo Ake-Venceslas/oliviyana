@@ -23,13 +23,13 @@ import {
 //   setExpanded: React.Dispatch<React.SetStateAction<boolean>>;
 // }
 
-interface Appointments {
-  id: string;
-  image: string;
-  title: string;
-  subTitle: string;
-  time: string;
-}
+// interface Appointments {
+//   id: string;
+//   image: string;
+//   title: string;
+//   subTitle: string;
+//   time: string;
+// }
 
 const handlee = Handlee({ weight: "400", subsets: ["latin"] });
 

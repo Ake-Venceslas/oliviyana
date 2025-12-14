@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
 import { toast } from 'sonner';
-import { Calendar, Clock, User, Phone, Search, X, CheckCircle, AlertCircle, Plus, MapPin, FileText } from 'lucide-react';
+import { Calendar, Clock, User, Phone, Search, X, CheckCircle, AlertCircle, Plus, FileText } from 'lucide-react';
 
 interface Doctor {
   id: string;
@@ -186,7 +186,6 @@ export default function AppointmentsPage() {
   const AppointmentCard = ({ appointment }: { appointment: Appointment }) => {
     const timingStatus = getAppointmentTimingStatus(appointment);
     const appointmentDateTime = new Date(`${appointment.appointmentDate}T${appointment.appointmentTime}`);
-    const isUpcoming = timingStatus === 'upcoming' || timingStatus === 'today';
     const isPast = timingStatus === 'past';
     
     const doctor = appointment.doctor;

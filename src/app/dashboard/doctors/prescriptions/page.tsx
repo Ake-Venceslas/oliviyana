@@ -264,7 +264,7 @@ export default function PrescriptionsPage() {
               <form onSubmit={handleSendPrescription} className="p-6 space-y-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Contenu de l'ordonnance
+                    Contenu de l&apos;ordonnance
                   </label>
                   <textarea
                     value={prescriptionText}

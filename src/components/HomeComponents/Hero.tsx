@@ -68,7 +68,7 @@ const Hero = () => {
           <div className="grid justify-items-center">
             <h4 className="py-3 font-semibold">Dossiers Numériques</h4>
             <p className="text-center text-[.9rem] text-gray-500">
-              Accédez en toute sécurité à votre historique médical n'importe quand
+              Accédez en toute sécurité à votre historique médical n&apos;importe quand
             </p>
           </div>
         </div>
@@ -115,7 +115,7 @@ const Hero = () => {
             <br />
             les Patients
           </span>{" "}
-          et <span className="text-[#51b957]">les Médecins</span> N'importe Quand, N'importe Où
+          et <span className="text-[#51b957]">les Médecins</span> N&apos;importe Quand, N&apos;importe Où
         </h2>
         <div className="flex gap-5">
           <Link
