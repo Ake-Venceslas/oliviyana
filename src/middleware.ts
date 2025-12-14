@@ -2,6 +2,12 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+type SessionClaimsWithRole = {
+  metadata?: {
+    role?: string;
+  };
+};
+
 const isDoctorRoute = createRouteMatcher(['/dashboard/doctors(.*)']);
 const isPatientRoute = createRouteMatcher(['/dashboard/patients(.*)']);
 
@@ -15,7 +21,7 @@ export default clerkMiddleware(async (auth, req: NextRequest) => {
       return NextResponse.redirect(new URL('/login', req.url));
     }
     // Vérifier que l'utilisateur a le rôle "doctor"
-    const userRole = (sessionClaims as any)?.metadata?.role as string | undefined;
+    const userRole = (sessionClaims as SessionClaimsWithRole)?.metadata?.role;
     if (userRole && userRole !== 'doctor') {
       // Rôle incorrect, rediriger vers accès refusé
       return NextResponse.redirect(new URL('/access-denied', req.url));
@@ -28,7 +34,7 @@ export default clerkMiddleware(async (auth, req: NextRequest) => {
       return NextResponse.redirect(new URL('/login', req.url));
     }
     // Vérifier que l'utilisateur a le rôle "patient"
-    const userRole = (sessionClaims as any)?.metadata?.role as string | undefined;
+    const userRole = (sessionClaims as SessionClaimsWithRole)?.metadata?.role;
     if (userRole && userRole !== 'patient') {
       // Rôle incorrect, rediriger vers accès refusé
       return NextResponse.redirect(new URL('/access-denied', req.url));
