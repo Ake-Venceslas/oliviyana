@@ -73,7 +73,7 @@ export default function TestimonialsSlider() {
         — Nos Clients Heureux Disent
       </h2>
       <div className="flex items-center justify-center gap-8">
-        {visible.map((t, i) => (
+        {visible.map((t) => (
           <TestimonialCard key={t.name} {...t} />
         ))}
       </div>

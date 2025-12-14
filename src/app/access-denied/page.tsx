@@ -8,7 +8,7 @@ export default function AccessDenied() {
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-md text-center">
         <h1 className="text-3xl font-bold text-red-600 mb-4">Accès Refusé</h1>
         <p className="text-gray-600 mb-6">
-          Vous n'avez pas accès à cette page. Votre rôle utilisateur ne correspond pas à la page que vous essayez d'accéder.
+          Vous n&apos;avez pas accès à cette page. Votre rôle utilisateur ne correspond pas à la page que vous essayez d&apos;accéder.
         </p>
         <div className="space-y-3">
           <Link

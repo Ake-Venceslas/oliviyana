@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
 import { toast } from 'sonner';
-import { Calendar, Clock, User, CheckCircle, XCircle, AlertCircle, Mail } from 'lucide-react';
+import { Calendar, Clock, CheckCircle, XCircle, Mail } from 'lucide-react';
 
 interface Appointment {
   id: string;
@@ -19,7 +19,7 @@ interface Appointment {
 }
 
 export default function AppointmentsPage() {
-  const { user, isLoaded } = useUser();
+  const { isLoaded } = useUser();
   const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

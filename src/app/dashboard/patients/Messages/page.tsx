@@ -24,7 +24,6 @@ const MessagesPage = () => {
   const [selectedMessage, setSelectedMessage] = useState<Message | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState<"all" | "unread" | "starred">("all");
-  const [loading, setLoading] = useState(true);
 
   // Récupérer les messages depuis l'API
   useEffect(() => {
@@ -32,7 +31,6 @@ const MessagesPage = () => {
 
     const fetchMessages = async () => {
       try {
-        setLoading(true);
         const response = await fetch('/api/messages');
 
         if (!response.ok) {
@@ -81,8 +79,6 @@ const MessagesPage = () => {
         ];
         setMessages(baseMessages);
         setFilteredMessages(baseMessages);
-      } finally {
-        setLoading(false);
       }
     };
 

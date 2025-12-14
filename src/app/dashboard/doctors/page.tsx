@@ -33,6 +33,7 @@ interface Appointments {
 
 const handlee = Handlee({ weight: "400", subsets: ["latin"] });
 
+/*
 const appointments: Appointments[] = [
   {
     id: "01",
@@ -70,6 +71,7 @@ const appointments: Appointments[] = [
     time: "01:15 PM",
   },
 ];
+*/
 
 const healthChecks = [
   {
@@ -93,7 +95,7 @@ const healthChecks = [
 ];
 
 const Page = () => {
-  const { expanded, setExpanded, menuOpen, setMenuOpen } = useSidebar();
+  const { expanded } = useSidebar();
   const { user, isLoaded } = useUser();
 
   const userName = isLoaded && user ? user.firstName || user.emailAddresses[0].emailAddress : "Docteur";

@@ -288,7 +288,7 @@ export default function AppointmentsPage() {
                 <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-semibold text-amber-900">Aucune ordonnance</p>
-                  <p className="text-xs text-amber-800 mt-1">Aucune ordonnance n'a été générée pour ce rendez-vous</p>
+                  <p className="text-xs text-amber-800 mt-1">Aucune ordonnance n&apos;a été générée pour ce rendez-vous</p>
                 </div>
               </div>
             </div>
@@ -378,7 +378,7 @@ export default function AppointmentsPage() {
               ].map((filter) => (
                 <button
                   key={filter.id}
-                  onClick={() => setFilterStatus(filter.id as any)}
+                  onClick={() => setFilterStatus(filter.id as "all" | "upcoming" | "past")}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     filterStatus === filter.id
                       ? 'bg-blue-100 text-blue-700'
@@ -483,7 +483,7 @@ export default function AppointmentsPage() {
                         </div>
                         <div className="flex items-center gap-3">
                           <Calendar className="h-4 w-4 text-gray-400 flex-shrink-0" />
-                          <p className="text-gray-700">{doctor.experience} ans d'expérience</p>
+                          <p className="text-gray-700">{doctor.experience} ans d&apos;expérience</p>
                         </div>
                         {doctor.phone && (
                           <div className="flex items-center gap-3">

@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     try {
       const authData = await auth();
       userId = authData?.userId || null;
-    } catch (authError) {
+    } catch {
       console.warn("Authentification échouée, utilisation du mode système");
     }
 
@@ -87,7 +87,7 @@ export async function POST(request: Request) {
   }
 }
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const { userId } = await auth();
     

@@ -306,7 +306,7 @@ export default function PrescriptionsPage() {
                     ) : (
                       <>
                         <MessageCircle className="h-5 w-5" />
-                        Envoyer l'ordonnance
+                        Envoyer l&apos;ordonnance
                       </>
                     )}
                   </button>

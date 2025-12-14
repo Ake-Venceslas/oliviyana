@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="grid gap-y-5 max-w-2xl">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
             Connecter <span className="text-[#2E7D32]">les Patients</span> et{" "}
-            <span className="text-[#2E7D32]">les Médecins</span>, N'importe Quand, N'importe Où
+            <span className="text-[#2E7D32]">les Médecins</span>, N&apos;importe Quand, N&apos;importe Où
           </h2>
           <p className="text-base sm:text-lg text-gray-700">
             Réservez facilement des rendez-vous, accédez à vos dossiers et connectez-vous avec des médecins de confiance, tout en un seul endroit sécurisé.

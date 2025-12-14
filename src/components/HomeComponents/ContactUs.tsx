@@ -27,8 +27,8 @@ const ContactUs = () => {
         <div className="grid gap-y-[1.5rem] justify-center text-center">
           <h3 className="font-semibold text-[2.5rem]">Nous Contacter</h3>
           <p className="font-semibold text-gray-500 w-[75vw]">
-            Si vous avez des questions, besoin d'assistance avec nos services, ou souhaitez
-            partager vos commentaires, notre équipe est là pour vous aider. N'hésitez pas à
+            Si vous avez des questions, besoin d&apos;assistance avec nos services, ou souhaitez
+            partager vos commentaires, notre équipe est là pour vous aider. N&apos;hésitez pas à
             nous contacter en utilisant le formulaire ci-dessous, envoyez-nous un e-mail ou appelez notre
             {/* customer care line. Whether you’re booking an appointment,
             requesting medical records, or looking for more information about
@@ -47,7 +47,7 @@ const ContactUs = () => {
               </h5>
               <p className="w-[19rem] text-[.9rem] mt-2">
                 Votre santé et votre satisfaction sont nos priorités absolues,
-                n'hésitez pas à nous contacter!
+                n&apos;hésitez pas à nous contacter!
               </p>
             </div>
             <div className="grid gap-y-[2rem] mt-[2rem]">

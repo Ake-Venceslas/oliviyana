@@ -6,7 +6,7 @@ import { Calendar } from "@/components/ui/calendar"
 
 export function CalendarCn() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
-  const { expanded, setExpanded } = useSidebar();
+  const { expanded } = useSidebar();
 
   return (
     <Calendar

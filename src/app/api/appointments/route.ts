@@ -157,8 +157,8 @@ export async function GET(request: Request) {
       appointments = getPatientAppointments(userId);
     } else {
       // Retourner tous les rendez-vous (avec authentification)
-      const allAppointments = require("@/lib/storage").getAllAppointments();
-      appointments = allAppointments;
+      const { getAllAppointments } = await import("@/lib/storage");
+      appointments = getAllAppointments();
     }
 
     return NextResponse.json(
@@ -186,7 +186,7 @@ export async function PATCH(request: Request) {
     }
 
     const body = await request.json();
-    const { appointmentId, status, patientEmail, patientName, patientId, appointmentDate, appointmentTime, reason, doctorName } = body;
+    const { appointmentId, status, patientEmail, patientName, patientId, appointmentDate, appointmentTime, reason } = body;
 
     if (!appointmentId || !status) {
       return NextResponse.json(

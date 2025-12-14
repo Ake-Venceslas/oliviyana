@@ -28,7 +28,7 @@ export default function LogoutPage() {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="text-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">Déconnexion en cours...</h1>
-        <p className="text-gray-600">Veuillez patienter, vous allez être redirigé vers la page d'accueil.</p>
+        <p className="text-gray-600">Veuillez patienter, vous allez être redirigé vers la page d&apos;accueil.</p>
       </div>
     </div>
   );

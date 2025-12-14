@@ -16,7 +16,6 @@ import {
   UserRoundCog,
   LogOut,
   CircleQuestionMark,
-  ChevronLeftIcon,
 } from "lucide-react";
 import { RiMenuFold4Line, RiMenuFold3Line } from "react-icons/ri";
 

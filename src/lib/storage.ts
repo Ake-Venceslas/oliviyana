@@ -273,7 +273,7 @@ export function updatePatientProfile(patientId: string, updates: Partial<Patient
   
   if (index !== -1) {
     // Ne pas permettre de modifier le barcode
-    const { barcode, ...safeUpdates } = updates;
+    const { ...safeUpdates } = updates;
     
     profiles[index] = {
       ...profiles[index],

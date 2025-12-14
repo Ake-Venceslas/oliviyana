@@ -19,7 +19,7 @@ const AboutUs = () => {
             Découvrez notre mission
           </h3>
           <p className="text-gray-600">
-            Nous nous engageons à rendre les soins de santé accessibles, fiables et centrés sur le patient. Notre plateforme connecte les patients aux médecins de confiance, simplifie la prise de rendez-vous et favorise de meilleurs résultats en matière de santé grâce à la technologie. En combinant innovation et compassion, nous visons à autonomiser chaque patient pour qu'il prenne soin de son bien-être.
+            Nous nous engagements à rendre les soins de santé accessibles, fiables et centrés sur le patient. Notre plateforme connecte les patients aux médecins de confiance, simplifie la prise de rendez-vous et favorise de meilleurs résultats en matière de santé grâce à la technologie. En combinant innovation et compassion, nous visons à autonomiser chaque patient pour qu&apos;il prenne soin de son bien-être.
           </p>
           <div className="grid grid-cols-2 gap-y-4 justify-between">
             <div className="flex items-center gap-x-[1rem]">
@@ -83,7 +83,7 @@ const AboutUs = () => {
               <DialogTitle>Découvrez notre mission</DialogTitle>
               <div className="grid gap-y-3">
                 <div className="text-gray-600">
-                  Nous nous engageons à rendre les soins de santé accessibles, fiables et centrés sur le patient. Notre plateforme connecte les patients aux médecins de confiance, simplifie la prise de rendez-vous et favorise de meilleurs résultats en matière de santé grâce à la technologie. En combinant innovation et compassion, nous visons à autonomiser chaque patient pour qu'il prenne soin de son bien-être.
+                  Nous nous engageons à rendre les soins de santé accessibles, fiables et centrés sur le patient. Notre plateforme connecte les patients aux médecins de confiance, simplifie la prise de rendez-vous et favorise de meilleurs résultats en matière de santé grâce à la technologie. En combinant innovation et compassion, nous visons à autonomiser chaque patient pour qu&apos;il prenne soin de son bien-être.
                 </div>
                 <div className="grid  gap-y-4 justify-between">
                   <div className="flex items-center gap-x-[1rem]">
@@ -96,7 +96,7 @@ const AboutUs = () => {
                     <div className="place-self-start pt-1.5">
                       <CircleCheckBig color="#2E7D32" size={15} />
                     </div>
-                    <p>Améliorer l'engagement des patients</p>
+                    <p>Améliorer l&apos;engagement des patients</p>
                   </div>
                   <div className="flex items-center gap-x-[1rem]">
                     <div className="place-self-start pt-1.5">

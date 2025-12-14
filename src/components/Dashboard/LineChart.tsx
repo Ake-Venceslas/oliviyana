@@ -9,7 +9,7 @@ import {
 
 interface CustomDotProps extends DotProps {
   index: number;
-  data: any[];
+  data: { name: string; value: number }[];
   stroke: string;
   payload: string;
 }
@@ -25,7 +25,7 @@ const offlineLineData = [
 
 // Custom dot renderer for the end point only
 function RedEndDot(props: CustomDotProps) {
-  const { cx, cy, index, payload, data } = props;
+  const { cx, cy, index, data } = props;
   if (index === data.length - 1) {
     return (
       <g key={`red-dot-${index}`}>
