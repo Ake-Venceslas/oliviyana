@@ -38,5 +38,19 @@
     "isStarred": false,
     "messageType": "appointment_request",
     "recipientId": "user_36hxGeIGeSDwuqFX43JeVSwMkmM"
+  },
+  {
+    "id": "MSG_1765754236205_r9lw6jun4",
+    "sender": "Kuete Junior",
+    "senderType": "doctor",
+    "senderEmail": "juniormongue20@gmail.com",
+    "senderId": "user_36hH3UvxmJzoxf4jhTRznIeaAiZ",
+    "subject": "Ordonnance médicale",
+    "content": "Doliprane",
+    "timestamp": "2025-12-14T23:17:16.609Z",
+    "isRead": false,
+    "isStarred": false,
+    "messageType": "prescription",
+    "recipientId": "user_36hGYvHpVcj5YXEEH4fRVlX3zQa"
   }
 ]

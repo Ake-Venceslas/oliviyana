@@ -57,15 +57,35 @@ export async function POST(request: Request) {
 
     const doctorName = `${doctor.firstName || ""} ${doctor.lastName || ""}`.trim();
 
-    // Vérifier que le docteur n'a pas déjà un rendez-vous à la même heure
+    // Vérifier que le docteur n'a pas déjà un rendez-vous dans la plage de 25 minutes
     const doctorAppointments = getDoctorAppointments(doctorId);
-    const conflictingAppointment = doctorAppointments.find(
-      (apt) => apt.appointmentDate === appointmentDate && apt.appointmentTime === appointmentTime
-    );
+    
+    // Convertir les heures en minutes pour faciliter la comparaison
+    const [requestHour, requestMinute] = appointmentTime.split(':').map(Number);
+    const requestTotalMinutes = requestHour * 60 + requestMinute;
+    
+    const conflictingAppointment = doctorAppointments.find((apt) => {
+      if (apt.appointmentDate !== appointmentDate) return false;
+      if (apt.status === "cancelled") return false; // Ignorer les rendez-vous annulés
+      
+      const [aptHour, aptMinute] = apt.appointmentTime.split(':').map(Number);
+      const aptTotalMinutes = aptHour * 60 + aptMinute;
+      
+      // Vérifier si le rendez-vous existant chevauche la plage de 25 minutes du nouveau rendez-vous
+      // Un rendez-vous dure 25 minutes
+      const appointmentStart = requestTotalMinutes;
+      const appointmentEnd = requestTotalMinutes + 25;
+      
+      const existingStart = aptTotalMinutes;
+      const existingEnd = aptTotalMinutes + 25;
+      
+      // Vérifier le chevauchement
+      return (appointmentStart < existingEnd && appointmentEnd > existingStart);
+    });
 
     if (conflictingAppointment) {
       return NextResponse.json(
-        { error: `Le docteur a déjà un rendez-vous le ${appointmentDate} à ${appointmentTime}` },
+        { error: `Le docteur a déjà un rendez-vous qui chevauche l'horaire demandé. Chaque consultation dure 25 minutes. Veuillez choisir un autre créneau.` },
         { status: 409 }
       );
     }

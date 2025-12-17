@@ -77,7 +77,7 @@ const Navbar = () => {
 
             <div className='flex gap-3 lg:gap-4 items-center'>
                 <Link href={'/login'} className='text-sm lg:text-base hover:text-[#2E7D32] transition'>Connexion</Link>
-                <Link className='bg-default rounded-lg py-2 px-4 text-white text-sm lg:text-base hover:bg-[#1B5E20] transition' href={'/register'}>S&apos;inscrire</Link>
+                <Link className='bg-default rounded-lg py-2 px-4 text-white text-sm lg:text-base hover:bg-[#1B5E20] transition' href={'/register'}>S'inscrire</Link>
             </div>
         </div>
         {/* Nav-links Section */}
@@ -86,59 +86,63 @@ const Navbar = () => {
 
 
       {/* Mobile View */}
-      <section ref={containerRef}  className='bg-default lg:hidden fixed bottom-0 left-0 right-0 z-20'>
+      <section ref={containerRef}  className='bg-default lg:hidden fixed bottom-0 left-0 right-0 pl-5 z-20'>
         <div ref={containerRef} className='relative'>
             <AnimatePresence initial={false}>
                 {isOpen ? (
                     <motion.div
-                        className="absolute bottom-[4rem] left-0 right-4 grid gap-y-2 justify-end"
+                        className="absolute bottom-[5.5rem] left-0 right-4 grid gap-y-1 justify-end"
                         variants={buttonVariants}
                         initial='initial'
                         animate='animate'
                         exit='exit'
                     >
-                        <Link href={'/login'} className='flex gap-x-2 items-center py-2 px-4 bg-white text-gray-600 font-medium text-xs sm:text-sm rounded-lg shadow-md hover:bg-gray-100 transition'>
-                            <UserRoundCheck size={16}/>
+                        {/* <Button className='bg-white text-gray-600 font-medium text-[.7rem] shadow-md'>
+                            <MessageSquareQuote/>
+                            Témoignages
+                        </Button> */}
+                        <Link href={'#'} className='flex gap-x-3 items-center py-2 px-4 bg-white text-gray-600 font-medium text-[.7rem] rounded-md shadow-md'>
+                            <UserRoundCheck/>
                             Se Connecter
                         </Link>
-                        <Link href={'/register'} className='flex gap-x-2 items-center py-2 px-4 bg-white text-gray-600 font-medium text-xs sm:text-sm rounded-lg shadow-md hover:bg-gray-100 transition'>
-                            <LogIn size={16}/>
-                            S&apos;inscrire
+                        <Link href={'#'} className='flex gap-x-3 items-center py-2 px-4 bg-white text-gray-600 font-medium text-[.7rem] rounded-md shadow-md'>
+                            <LogIn/>
+                            S'inscrire
                         </Link>
                     </motion.div>
                 ) : null }
             </AnimatePresence>
-            <ul className='flex px-2 justify-between items-center text-gray-300 text-xs font-medium gap-1'>
+            <ul className='flex px-1 justify-between items-center text-gray-300 text-[.6rem] font-medium'>
                 <li>
-                    <NavLink className='flex flex-col items-center gap-1' href={'#home'}>
-                        <div><House size={18}/></div>
-                        <p className='text-[0.65rem]'>Accueil</p>
+                    <NavLink className='flex flex-col items-center' href={'#home'}>
+                        <div><House width={17}/></div>
+                        <p>Accueil</p>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink className='flex flex-col items-center gap-1' href={'#aboutUs'}>
-                        <div><Users size={18}/></div>
-                        <p className='text-[0.65rem]'>À Propos</p>
+                    <NavLink className='flex flex-col items-center' href={'#aboutUs'}>
+                        <div><Users width={17}/></div>
+                        <p>À Propos</p>
                     </NavLink>
                 </li>
                 
                 <li>
-                    <NavLink className='flex flex-col items-center gap-1' href={'#healthCenter'}>
-                        <div><ScrollText size={18}/></div>
-                        <p className='text-[0.65rem]'>Hôpitaux</p>
+                    <NavLink className='flex flex-col items-center' href={'##healthCenter'}>
+                        <div><ScrollText width={17}/></div>
+                        <p>Hôpitaux</p>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink className='flex flex-col items-center gap-1' href={'#contactUs'}>
-                        <div><Headset size={18}/></div>
-                        <p className='text-[0.65rem]'>Nous Contacter</p>
+                    <NavLink className='flex flex-col items-center' href={'#contactUs'}>
+                        <div><Headset width={17}/></div>
+                        <p>Nous Contacter</p>
                     </NavLink>
                 </li>
                 <li><Button
                         onClick={toggleMenu}
-                        className='relative rounded-full bg-white shadow-lg w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition'
+                        className='relative bottom-6 rounded-full bg-white shadow-xl/30 w-[3rem] h-[3rem]'
                     >
-                        <Menu size={20} color='gray'/>
+                        <Menu color='gray'/>
                     </Button>
                 </li>
             </ul>
@@ -150,9 +154,8 @@ const Navbar = () => {
         <Image 
           src='/logo 2.png' 
           alt='Logo' 
-          width={65} 
-          height={22}
-          className='w-auto h-auto'
+          width={70} 
+          height={24}
         />
       </div>
 
