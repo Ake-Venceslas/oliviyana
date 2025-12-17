@@ -77,7 +77,7 @@ const Navbar = () => {
 
             <div className='flex gap-3 lg:gap-4 items-center'>
                 <Link href={'/login'} className='text-sm lg:text-base hover:text-[#2E7D32] transition'>Connexion</Link>
-                <Link className='bg-default rounded-lg py-2 px-4 text-white text-sm lg:text-base hover:bg-[#1B5E20] transition' href={'/register'}>S'inscrire</Link>
+                <Link className='bg-default rounded-lg py-2 px-4 text-white text-sm lg:text-base hover:bg-[#1B5E20] transition' href={'/register'}>S&apos;inscrire</Link>
             </div>
         </div>
         {/* Nav-links Section */}
@@ -107,7 +107,7 @@ const Navbar = () => {
                         </Link>
                         <Link href={'#'} className='flex gap-x-3 items-center py-2 px-4 bg-white text-gray-600 font-medium text-[.7rem] rounded-md shadow-md'>
                             <LogIn/>
-                            S'inscrire
+                            S&apos;inscrire
                         </Link>
                     </motion.div>
                 ) : null }
